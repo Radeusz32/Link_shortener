@@ -8,4 +8,6 @@ Po wywołaniu metody createShortLink utworzy się link o wzorze pierwszy znak li
 
 Link dodaje się dynamicznie do listy.
 
+Wymagana jest konfiguracja bazy danych w pliku .env
+
 
