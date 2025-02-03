@@ -12,11 +12,11 @@ class LinkController extends Controller
     public function store(Request $request)
     {
         $originalUrl = $request->original_url;
-
+    // Sprawdzamy czy link ma https:// lub http:// przed nazwa, jeśli nie ma to dodajemy
         if (!preg_match("~^(http|https)://~", $originalUrl)) {
             $originalUrl = "https://" . $originalUrl;
         }
-
+    // Walidacja linku
         $validatedData = validator(
             ['original_url' => $originalUrl],
             ['original_url' => 'required|url']

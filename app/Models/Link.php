@@ -19,13 +19,13 @@ class Link extends Model
         // Pobieramy tylko nazwę domeny bez końcówki (np. "youtube" z "youtube.pl")
         $domainParts = explode(".", $domain);
         if (count($domainParts) < 2) {
-            return substr(md5(uniqid()), 0, 6); // Awaryjny kod, jeśli coś pójdzie źle
+            return substr(md5(uniqid()), 0, 6); // Awaryjny kod, jeśli coś pójdzie źle. Tworzymy losowy ciąg 6 znaków
         }
     
         $domainName = $domainParts[0]; // youtube
         $tld = $domainParts[count($domainParts) - 1]; // pl
     
-        // Pobieramy 2 pierwsze i 2 ostatnie litery nazwy domeny
+        // Pobieramy pierwszą i ostatnia litere nazwy domeny
         $first = substr($domainName, 0, 1);
         $last = substr($domainName, -1);
     
