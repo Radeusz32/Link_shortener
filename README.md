@@ -23,7 +23,6 @@ youtube.pl -> ye21.pl
 1. **Sklonuj repozytorium**:
    ```sh
    git clone https://github.com/Link_shortener.git
-   cd virtual-library
 
 2. **Zainstaluj zależności backendowe**:
    ```sh
